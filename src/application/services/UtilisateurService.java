@@ -7,11 +7,20 @@ import java.util.List;
 
 public class UtilisateurService {
 
-    private final UtilisateurRepository utilisateurRepository;
+	private final UtilisateurRepository utilisateurRepository;
+	private List<Utilisateur> listeUtilisateurs;
 
-    public UtilisateurService() {
-        utilisateurRepository = new UtilisateurRepository();
-    }
+	public UtilisateurService() {
+		utilisateurRepository = new UtilisateurRepository();
+	}
+
+	public void rechercherParId(String idUser){
+
+		listeUtilisateurs.stream()
+				.filter(user -> user.getIdentifiant().equals(idUser))
+				.forEach(IO::println);
+
+	}
 
     public Utilisateur creerUtilisateur(String prenom, String nom) {
         String identifiantUtilisateur = prenom.charAt(0) + nom;

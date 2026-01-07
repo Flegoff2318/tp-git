@@ -19,4 +19,8 @@ public class UtilisateurRepository {
 	public List<Utilisateur> getUtilisateurs() {
 		return utilisateurs;
 	}
+
+	public void setUtilisateurs(List<Utilisateur> utilisateurs) {
+		this.utilisateurs = utilisateurs;
+	}
 }
