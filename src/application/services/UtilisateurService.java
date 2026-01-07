@@ -22,4 +22,14 @@ public class UtilisateurService {
 
 	}
 
+    public Utilisateur creerUtilisateur(String prenom, String nom) {
+        String identifiantUtilisateur = prenom.charAt(0) + nom;
+        Utilisateur nouvelUtilisateur = new Utilisateur(identifiantUtilisateur, nom, prenom, "");
+        utilisateurRepository.getUtilisateurs().add(nouvelUtilisateur);
+        return nouvelUtilisateur;
+    }
+
+    public List<Utilisateur> rechercherTous(){
+        return utilisateurRepository.getUtilisateurs();
+    }
 }
