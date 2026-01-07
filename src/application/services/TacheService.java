@@ -33,12 +33,4 @@ public class TacheService {
 
 	}
 
-	public void rechercherParUtilisateur(String idUtilisateur){
-
-		listeTaches.stream()
-				.filter(tache -> tache.getIdUtilisateurAssigne().equalsIgnoreCase(idUtilisateur))
-				.forEach(IO::println);
-
-	}
-
 }
