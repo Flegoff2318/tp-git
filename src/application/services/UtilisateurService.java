@@ -3,6 +3,8 @@ package application.services;
 import application.domaine.Utilisateur;
 import application.repositories.UtilisateurRepository;
 
+import java.util.List;
+
 public class UtilisateurService {
 
     private final UtilisateurRepository utilisateurRepository;
@@ -16,5 +18,9 @@ public class UtilisateurService {
         Utilisateur nouvelUtilisateur = new Utilisateur(identifiantUtilisateur, nom, prenom, "");
         utilisateurRepository.getUtilisateurs().add(nouvelUtilisateur);
         return nouvelUtilisateur;
+    }
+
+    public List<Utilisateur> rechercherTous(){
+        return utilisateurRepository.getUtilisateurs();
     }
 }
