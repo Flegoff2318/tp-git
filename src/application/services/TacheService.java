@@ -10,4 +10,12 @@ public class TacheService {
 	public TacheService() {
 		tacheRepository = new TacheRepository();
 	}
+
+	public int getCompteurId() {
+		return compteurId;
+	}
+
+	public TacheRepository getTacheRepository() {
+		return tacheRepository;
+	}
 }
