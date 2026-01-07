@@ -14,6 +14,10 @@ public class UtilisateurService {
 		utilisateurRepository = new UtilisateurRepository();
 	}
 
+	public void afficherTous(){
+		IO.println(utilisateurRepository.getUtilisateurs());
+	}
+
 	public void rechercherParId(String idUser){
 
 		listeUtilisateurs.stream()
