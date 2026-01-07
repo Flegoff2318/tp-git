@@ -51,4 +51,12 @@ public class TacheService {
 		tache.setEtat(Etat.EN_COURS);
 		// tacheRepository.save(tache);
 	}
+
+	public void completerTache(int identifiantTache){
+		Tache tache = tacheRepository.getTaches().stream()
+				.filter(t->t.getId()==identifiantTache)
+				.findFirst()
+				.orElseThrow(()-> new RuntimeException("Tache inexistante"));
+		tache.setEtat(Etat.TERMINEE);
+	}
 }
