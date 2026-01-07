@@ -15,4 +15,12 @@ public class UtilisateurRepository {
 		utilisateurs.add(new Utilisateur("lmoreau", "Moreau", "Lucie", "lucie.moreau@mail.com"));
 		utilisateurs.add(new Utilisateur("cgarcia", "Garcia", "Camille", "camille.garcia@mail.com"));
 	}
+
+	public List<Utilisateur> getUtilisateurs() {
+		return utilisateurs;
+	}
+
+	public void setUtilisateurs(List<Utilisateur> utilisateurs) {
+		this.utilisateurs = utilisateurs;
+	}
 }
