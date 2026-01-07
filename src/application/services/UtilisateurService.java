@@ -32,4 +32,13 @@ public class UtilisateurService {
     public List<Utilisateur> rechercherTous(){
         return utilisateurRepository.getUtilisateurs();
     }
+
+	public void modifierCourriel(String idUser, String adresseMail){
+
+		listeUtilisateurs.stream()
+				.filter(user -> user.getIdentifiant().equalsIgnoreCase(idUser))
+				.forEach(s -> s.setCourriel(adresseMail));
+
+	}
+
 }
